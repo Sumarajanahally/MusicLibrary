@@ -28,6 +28,8 @@ namespace MusicLibrary
     {
         private ObservableCollection<Music> songs;
         private List<MenuItem> menuItems;
+      //  private Music selectedSong;
+        private ObservableCollection<Music> playList;
 
         public MainPage()
         {
@@ -38,11 +40,13 @@ namespace MusicLibrary
                 Loaded += MainPage_Loaded;
             }
             songs = new ObservableCollection<Music>();
+            playList = new ObservableCollection<Music>();
             MusicManager.GetAllSongs(songs);
 
             menuItems = new List<MenuItem>();
             menuItems.Add(new MenuItem { IconFile = "Assets/Icons/animals.png", Category = MusicCategory.Pop });
             menuItems.Add(new MenuItem { IconFile = "Assets/Icons/cartoon.png", Category = MusicCategory.Kids });
+            menuItems.Add(new MenuItem { IconFile = "Assets/Icons/cartoon.png", Category = MusicCategory.MyPlaylist });
             BackButton.Visibility = Visibility.Collapsed;
 
         }
@@ -62,18 +66,30 @@ namespace MusicLibrary
         {
             MusicManager.GetAllSongs(songs);
             TextBlock.Text = "All Music";
+            MusicGridView.ItemsSource = songs;
             BackButton.Visibility = Visibility.Collapsed;
             MenuItemListView.SelectedItem = null;
-            
+
 
         }
 
         private void MusicGridView_ItemClick(object sender, ItemClickEventArgs e)
         {
             var sound = (Music)e.ClickedItem;
-           MusicMedia.Source = new Uri(this.BaseUri, sound.AudioFile);
+            //selectedSong = sound;
+
+            MusicMedia.Source = new Uri(this.BaseUri, sound.AudioFile);
             MusicMedia.PosterSource = new BitmapImage(new Uri(this.BaseUri, sound.ImageFile));
             SimplepopTextBlock.Text = sound.Name;
+
+            if (MenuItemListView.SelectedItem != null)
+            {
+                if (sound.Category == MusicCategory.MyPlaylist)
+                {
+                    AddPlaylist.Visibility = Visibility.Collapsed;
+                }
+
+            }
             if (!StandardPopup.IsOpen) { StandardPopup.IsOpen = true; }
 
             // MusicplayerMedia.Source = MediaSource.CreateFromUri(new Uri(this.BaseUri, sound.AudioFile));
@@ -81,14 +97,17 @@ namespace MusicLibrary
 
         private void MenuItemListView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var menuItem  = (MenuItem)e.ClickedItem;
-            TextBlock.Name = menuItem.Category.ToString();
+            var menuItem = (MenuItem)e.ClickedItem;
+
+            TextBlock.Text = menuItem.Category.ToString();
 
             if (menuItem.Category == MusicCategory.MyPlaylist)
-            { 
+            {
+                MusicGridView.ItemsSource = playList;
             }
             else
             {
+                MusicGridView.ItemsSource = songs;
                 MusicManager.GetAllSongsByCategory(songs, menuItem.Category);
             }
             BackButton.Visibility = Visibility.Visible;
@@ -111,19 +130,36 @@ namespace MusicLibrary
             if (!StandardPopup.IsOpen) { StandardPopup.IsOpen = true; }
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
 
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void ChangeCoverButton_Click(object sender, RoutedEventArgs e)
         {
-           string songName = SimplepopTextBlock.Text;
+            //string songName = SimplepopTextBlock.Text;
+
+        }
+
+        private void AddPlaylist_Click(object sender, RoutedEventArgs e)
+        {
+            string songn = SimplepopTextBlock.Text;
+           // playList.Add(new Music(selectedSong));
+
+            
+            
+            var filteredSongs = songs.Where(song => song.Name  == songn).ToList();
+            filteredSongs.ForEach(song => playList.Add(new Music(song.Name, MusicCategory.MyPlaylist, song.AudioFile, song.ImageFile)));
+
+
+
+
+        }
+
+        private void StackPanel_RightTapped(object sender, RightTappedRoutedEventArgs e)
+        {
+            var songMenuFlyoutSubItem = new MenuFlyoutSubItem()
+            {
+                Text = "AddToPlayList"
+            };
+
 
         }
     }

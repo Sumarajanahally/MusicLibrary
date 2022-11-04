@@ -16,14 +16,14 @@
         </Grid.RowDefinitions>
         <RelativePanel Grid.Row="0">
             
-            <Button x:ConnectionId='19' Name ="HamburgerButton"
+            <Button x:ConnectionId='20' Name ="HamburgerButton"
                                                  
                     FontFamily="Segoe MDL2 Assets"
                     Content="&#xE700;"
                     Height="45"
                     Width="45"
                     />
-            <Button x:ConnectionId='20' Name="BackButton"
+            <Button x:ConnectionId='21' Name="BackButton"
                                             
                     RelativePanel.RightOf="HamburgerButton"
                     FontFamily="Segoe MDL2 Assets"
@@ -31,7 +31,7 @@
                     Height="45"
                     Width="45"
                     />
-            <TextBlock x:ConnectionId='21' Name="UserName" Text="Welcome" RelativePanel.AlignRightWithPanel="True"  Margin="0,10,20,0"/>
+            <TextBlock x:ConnectionId='22' Name="UserName" Text="Welcome" RelativePanel.AlignRightWithPanel="True"  Margin="0,10,20,0"/>
             <!-- <StackPanel RelativePanel.RightOf ="BackButton">
                 <Button Content="Show Popup (using Offset)" Click="ShowPopupOffsetClicked"/>
             </StackPanel>
@@ -65,6 +65,7 @@
                     
                    
                 </ListView>
+                
             </SplitView.Pane>
             <SplitView.Content>
                 <Grid Margin="20,0,0,0">
@@ -81,9 +82,9 @@
                                                                  >
                         <GridView.ItemTemplate>
                             <DataTemplate                         >
-                                <StackPanel x:ConnectionId='16' Orientation="Vertical">
-                                <Image x:ConnectionId='17' Height="112" Width="101"                             ></Image>
-                                <TextBlock x:ConnectionId='18'                      Margin="30,0,0,0"/>
+                                <StackPanel x:ConnectionId='17' Orientation="Vertical"                                     >
+                                <Image x:ConnectionId='18' Height="112" Width="101"                             ></Image>
+                                <TextBlock x:ConnectionId='19'                      Margin="30,0,0,0"/>
                                 </StackPanel>
                             </DataTemplate>
                            
@@ -104,7 +105,8 @@
                                 </MediaElement>
                                 <TextBlock x:ConnectionId='12' x:Name="SimplepopTextBlock" Text="Simple Popup" FontSize="24.667" HorizontalAlignment="Center"/>
                                 <Button x:ConnectionId='13' x:Name="ChangeCoverButton" Content="Change Cover"                                 />
-                                <Button x:ConnectionId='14' Content="Close"                           HorizontalAlignment="Center"/>
+                                <Button x:ConnectionId='14' x:Name="AddPlaylist" Content="Add Playlist"                           />
+                                <Button x:ConnectionId='15' Content="Close"                           HorizontalAlignment="Center"/>
                             </StackPanel>
                         </Border>
                     </Popup>

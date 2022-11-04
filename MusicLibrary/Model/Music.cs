@@ -24,12 +24,13 @@ namespace MusicLibrary.Model
         public MusicCategory Category { get; set; }
 
 
-        public Music( string name,MusicCategory category)
+        public Music( string name,MusicCategory category,string audioFile,string imageFile)
         {
             Name = name;
-            AudioFile = $"/Assets/Music/{category}/{name}.mp3";
-            ImageFile = $"/Assets/CoverImages/{category}/{name}.jpg"; ;
             Category = category;
+            AudioFile = audioFile;// $"/Assets/Music/{category}/{name}.mp3";
+            ImageFile = imageFile; //$"/Assets/CoverImages/{category}/{name}.jpg"; ;
+            
         }
 
 

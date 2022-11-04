@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\Github\MusicLibrary\MusicLibrary\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-11-03T01:44:29.993</Modified>
+      <Modified>2022-11-04T19:59:03.210</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\bin\x86\Debug\MusicLibrary.exe">
       <PackagePath>entrypoint\MusicLibrary.exe</PackagePath>
-      <Modified>2022-11-03T01:44:28.595</Modified>
+      <Modified>2022-11-04T19:59:01.931</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -110,19 +110,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\bin\x86\Debug\MusicLibrary.xr.xml">
       <PackagePath>MusicLibrary.xr.xml</PackagePath>
-      <Modified>2022-11-02T20:07:20.300</Modified>
+      <Modified>2022-11-04T19:59:01.765</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-11-03T01:44:28.445</Modified>
+      <Modified>2022-11-04T19:59:01.806</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\bin\x86\Debug\LoginPage.xbf">
       <PackagePath>LoginPage.xbf</PackagePath>
-      <Modified>2022-11-03T01:44:28.445</Modified>
+      <Modified>2022-11-04T19:59:01.806</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-11-03T01:44:28.445</Modified>
+      <Modified>2022-11-04T19:59:01.806</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -130,11 +130,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-11-03T01:44:29.344</Modified>
+      <Modified>2022-11-04T05:06:27.417</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\bin\x86\Debug\Core\MusicLibrary.exe">
       <PackagePath>MusicLibrary.exe</PackagePath>
-      <Modified>2022-11-03T01:44:29.977</Modified>
+      <Modified>2022-11-04T19:59:03.195</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
