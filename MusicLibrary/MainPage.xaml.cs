@@ -88,6 +88,10 @@ namespace MusicLibrary
                 {
                     AddPlaylist.Visibility = Visibility.Collapsed;
                 }
+                else
+                {
+                    AddPlaylist.Visibility = Visibility.Visible;
+                }
 
             }
             if (!StandardPopup.IsOpen) { StandardPopup.IsOpen = true; }
