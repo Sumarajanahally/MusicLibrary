@@ -40,7 +40,7 @@ namespace MusicLibrary.Model
             string pathmusic = root + "/Assets/Music";
             string pathimage = root + "/Assets/CoverImages";
             string[] filesMusic = Directory.GetFiles(pathmusic, "*.mp3",SearchOption.AllDirectories);
-            string[] filesImage = Directory.GetFiles(pathimage, "*.jpg", SearchOption.AllDirectories);
+            string[] filesImage = Directory.GetFiles(pathimage, "*.png", SearchOption.AllDirectories);
             string musicname, imagename;
             MusicCategory category;
 

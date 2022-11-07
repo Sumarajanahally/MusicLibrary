@@ -136,11 +136,12 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\CoverImages\kids\Test2.jpg" />
-    <Content Include="Assets\CoverImages\Pop\Test.jpg" />
+    <Content Include="Assets\CoverImages\kids\calender.png" />
+    <Content Include="Assets\CoverImages\kids\cleanup.png" />
     <Content Include="Assets\Icons\animals.png" />
     <Content Include="Assets\Icons\cartoon.png" />
-    <Content Include="Assets\Music\kids\Test2.mp3" />
+    <Content Include="Assets\Music\kids\calender.mp3" />
+    <Content Include="Assets\Music\kids\cleanup.mp3" />
     <Content Include="Assets\Music\Pop\Test.mp3" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
@@ -173,6 +174,7 @@
   <ItemGroup>
     <Folder Include="Assets\CoverImages\Bollywood\" />
     <Folder Include="Assets\CoverImages\Instrument\" />
+    <Folder Include="Assets\CoverImages\Pop\" />
     <Folder Include="Assets\Music\Bollywood\" />
     <Folder Include="Assets\Music\Instrument\" />
   </ItemGroup>
