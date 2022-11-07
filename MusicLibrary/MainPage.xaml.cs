@@ -44,9 +44,9 @@ namespace MusicLibrary
             MusicManager.GetAllSongs(songs);
 
             menuItems = new List<MenuItem>();
-            menuItems.Add(new MenuItem { IconFile = "Assets/Icons/animals.png", Category = MusicCategory.Pop });
-            menuItems.Add(new MenuItem { IconFile = "Assets/Icons/cartoon.png", Category = MusicCategory.Kids });
-            menuItems.Add(new MenuItem { IconFile = "Assets/Icons/cartoon.png", Category = MusicCategory.MyPlaylist });
+            menuItems.Add(new MenuItem { IconFile = "Assets/Icons/Instruments.png", Category = MusicCategory.Instruments });
+            menuItems.Add(new MenuItem { IconFile = "Assets/Icons/Kids.png", Category = MusicCategory.Kids });
+            menuItems.Add(new MenuItem { IconFile = "Assets/Icons/Myplaylist.png", Category = MusicCategory.MyPlaylist });
             BackButton.Visibility = Visibility.Collapsed;
 
         }

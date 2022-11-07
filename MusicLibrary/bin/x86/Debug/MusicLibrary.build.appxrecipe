@@ -40,11 +40,14 @@
     <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\CoverImages\kids\cleanup.png">
       <PackagePath>Assets\CoverImages\kids\cleanup.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\Icons\animals.png">
-      <PackagePath>Assets\Icons\animals.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\Icons\Instruments.png">
+      <PackagePath>Assets\Icons\Instruments.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\Icons\cartoon.png">
-      <PackagePath>Assets\Icons\cartoon.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\Icons\Kids.png">
+      <PackagePath>Assets\Icons\Kids.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\Icons\MyPlaylist.png">
+      <PackagePath>Assets\Icons\MyPlaylist.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>

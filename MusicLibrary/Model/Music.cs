@@ -9,7 +9,7 @@ namespace MusicLibrary.Model
 {
     internal enum MusicCategory
     {
-        Pop,
+        Instruments,
         Kids,
         MyPlaylist
     }

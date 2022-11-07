@@ -57,9 +57,9 @@ namespace MusicLibrary.Model
                     {
                         
                         
-                        if(FolderName == "Pop")
+                        if(FolderName == "Instruments")
                         {
-                            category = MusicCategory.Pop;
+                            category = MusicCategory.Instruments;
                         } 
                         else
                         {
