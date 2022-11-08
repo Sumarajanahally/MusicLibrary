@@ -1,10 +1,16 @@
 WinMetadata\Windows.winmd
+Assets\CoverImages\Instruments\flute.png
+Assets\CoverImages\Instruments\guitar.png
+Assets\CoverImages\Instruments\saxophone.png
 Assets\CoverImages\kids\calender.png
 Assets\CoverImages\kids\cleanup.png
 Assets\Icons\Instruments.png
 Assets\Icons\Kids.png
 Assets\Icons\MyPlaylist.png
 Assets\LockScreenLogo.scale-200.png
+Assets\Music\Instruments\flute.mp3
+Assets\Music\Instruments\guitar.mp3
+Assets\Music\Instruments\saxophone.mp3
 Assets\Music\kids\calender.mp3
 Assets\Music\kids\cleanup.mp3
 Assets\Music\Pop\Test.mp3

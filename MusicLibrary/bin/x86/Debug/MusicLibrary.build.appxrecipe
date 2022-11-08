@@ -34,6 +34,15 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\CoverImages\Instruments\flute.png">
+      <PackagePath>Assets\CoverImages\Instruments\flute.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\CoverImages\Instruments\guitar.png">
+      <PackagePath>Assets\CoverImages\Instruments\guitar.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\CoverImages\Instruments\saxophone.png">
+      <PackagePath>Assets\CoverImages\Instruments\saxophone.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\CoverImages\kids\calender.png">
       <PackagePath>Assets\CoverImages\kids\calender.png</PackagePath>
     </AppxPackagedFile>
@@ -75,6 +84,15 @@
     <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\Music\Instruments\flute.mp3">
+      <PackagePath>Assets\Music\Instruments\flute.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\Music\Instruments\guitar.mp3">
+      <PackagePath>Assets\Music\Instruments\guitar.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\Music\Instruments\saxophone.mp3">
+      <PackagePath>Assets\Music\Instruments\saxophone.mp3</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\Music\kids\calender.mp3">
       <PackagePath>Assets\Music\kids\calender.mp3</PackagePath>
