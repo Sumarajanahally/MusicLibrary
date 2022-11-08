@@ -39,6 +39,10 @@ namespace MusicLibrary
             {
                 Loaded += MainPage_Loaded;
             }
+            else
+            {
+                UserName.Text = LoginPage.UserName;
+            }
             songs = new ObservableCollection<Music>();
             playList = new ObservableCollection<Music>();
             MusicManager.GetAllSongs(songs);

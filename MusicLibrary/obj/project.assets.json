@@ -10255,18 +10255,18 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\srava\\.nuget\\packages\\": {},
+    "C:\\Users\\sumam\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\srava\\OneDrive\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary.csproj",
+      "projectUniqueName": "D:\\Github\\MusicLibrary\\MusicLibrary\\MusicLibrary.csproj",
       "projectName": "MusicLibrary",
-      "projectPath": "C:\\Users\\srava\\OneDrive\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\MusicLibrary.csproj",
-      "packagesPath": "C:\\Users\\srava\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\srava\\OneDrive\\Documents\\GitHub\\MusicLibrary\\MusicLibrary\\obj\\",
+      "projectPath": "D:\\Github\\MusicLibrary\\MusicLibrary\\MusicLibrary.csproj",
+      "packagesPath": "C:\\Users\\sumam\\.nuget\\packages\\",
+      "outputPath": "D:\\Github\\MusicLibrary\\MusicLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -10274,7 +10274,7 @@
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\srava\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sumam\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
