@@ -153,9 +153,12 @@ namespace MusicLibrary
 
             
             
-            var filteredSongs = songs.Where(song => song.Name  == songn).ToList();
-            filteredSongs.ForEach(song => playList.Add(new Music(song.Name, MusicCategory.MyPlaylist, song.AudioFile, song.ImageFile)));
-
+            
+            if (playList.Where(song => song.Name == songn).Count() == 0)
+            {
+                var filteredSongs = songs.Where(song => song.Name == songn).ToList();
+                filteredSongs.ForEach(song => playList.Add(new Music(song.Name, MusicCategory.MyPlaylist, song.AudioFile, song.ImageFile)));
+            }
 
 
 
