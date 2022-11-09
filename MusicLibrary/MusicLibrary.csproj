@@ -136,6 +136,9 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\ChooseImage\earbud-headphones.png" />
+    <Content Include="Assets\ChooseImage\radio.png" />
+    <Content Include="Assets\ChooseImage\tuning-fork.png" />
     <Content Include="Assets\CoverImages\Instruments\flute.png" />
     <Content Include="Assets\CoverImages\Instruments\guitar.png" />
     <Content Include="Assets\CoverImages\Instruments\saxophone.png" />
@@ -149,7 +152,6 @@
     <Content Include="Assets\Music\Instruments\saxophone.mp3" />
     <Content Include="Assets\Music\kids\calender.mp3" />
     <Content Include="Assets\Music\kids\cleanup.mp3" />
-    <Content Include="Assets\Music\Pop\Test.mp3" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -178,11 +180,7 @@
       <Version>6.2.14</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\CoverImages\Bollywood\" />
-    <Folder Include="Assets\CoverImages\Pop\" />
-    <Folder Include="Assets\Music\Bollywood\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
