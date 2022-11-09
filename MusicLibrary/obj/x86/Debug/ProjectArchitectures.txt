@@ -1,1 +1,0 @@
-C:\Pivot\Projects\MusicLibrary\MusicLibrary\MusicLibrary.csproj;x86
