@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>SUMA-LAPTOP</Machine>
-    <WindowsUser>sumam</WindowsUser>
+    <Machine>LAPTOP-T27U2DTT</Machine>
+    <WindowsUser>srava</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>49dd5c9a-75d1-4a71-b80c-2d2d9770d6c2</PackageIdentityName>
     <PackageIdentityPublisher>CN=sumam</PackageIdentityPublisher>
-    <IntermediateOutputPath>D:\Github\MusicLibrary\MusicLibrary\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>D:\Github\MusicLibrary\MusicLibrary\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="D:\Github\MusicLibrary\MusicLibrary\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\bin\x86\Debug\MusicLibrary.exe">
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\bin\x86\Debug\MusicLibrary.exe">
       <PackagePath>entrypoint\MusicLibrary.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
@@ -34,79 +34,97 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\Assets\CoverImages\kids\calender.png">
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\CoverImages\Instruments\flute.png">
+      <PackagePath>Assets\CoverImages\Instruments\flute.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\CoverImages\Instruments\guitar.png">
+      <PackagePath>Assets\CoverImages\Instruments\guitar.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\CoverImages\Instruments\saxophone.png">
+      <PackagePath>Assets\CoverImages\Instruments\saxophone.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\CoverImages\kids\calender.png">
       <PackagePath>Assets\CoverImages\kids\calender.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\Assets\CoverImages\kids\cleanup.png">
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\CoverImages\kids\cleanup.png">
       <PackagePath>Assets\CoverImages\kids\cleanup.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\Assets\Icons\Instruments.png">
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\Icons\Instruments.png">
       <PackagePath>Assets\Icons\Instruments.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\Assets\Icons\Kids.png">
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\Icons\Kids.png">
       <PackagePath>Assets\Icons\Kids.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\Assets\Icons\MyPlaylist.png">
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\Icons\MyPlaylist.png">
       <PackagePath>Assets\Icons\MyPlaylist.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\Assets\Music\kids\calender.mp3">
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\Music\Instruments\flute.mp3">
+      <PackagePath>Assets\Music\Instruments\flute.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\Music\Instruments\guitar.mp3">
+      <PackagePath>Assets\Music\Instruments\guitar.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\Music\Instruments\saxophone.mp3">
+      <PackagePath>Assets\Music\Instruments\saxophone.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\Music\kids\calender.mp3">
       <PackagePath>Assets\Music\kids\calender.mp3</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\Assets\Music\kids\cleanup.mp3">
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\Music\kids\cleanup.mp3">
       <PackagePath>Assets\Music\kids\cleanup.mp3</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\Assets\Music\Pop\Test.mp3">
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Assets\Music\Pop\Test.mp3">
       <PackagePath>Assets\Music\Pop\Test.mp3</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\bin\x86\Debug\MusicLibrary.xr.xml">
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\bin\x86\Debug\MusicLibrary.xr.xml">
       <PackagePath>MusicLibrary.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\bin\x86\Debug\LoginPage.xbf">
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\bin\x86\Debug\LoginPage.xbf">
       <PackagePath>LoginPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Github\MusicLibrary\MusicLibrary\bin\x86\Debug\Core\MusicLibrary.exe">
+    <AppxPackagedFile Include="C:\Users\srava\OneDrive\Documents\GitHub\MusicLibrary\MusicLibrary\bin\x86\Debug\Core\MusicLibrary.exe">
       <PackagePath>MusicLibrary.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

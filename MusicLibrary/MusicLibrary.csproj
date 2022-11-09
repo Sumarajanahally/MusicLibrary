@@ -136,11 +136,17 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\CoverImages\Instruments\flute.png" />
+    <Content Include="Assets\CoverImages\Instruments\guitar.png" />
+    <Content Include="Assets\CoverImages\Instruments\saxophone.png" />
     <Content Include="Assets\CoverImages\kids\calender.png" />
     <Content Include="Assets\CoverImages\kids\cleanup.png" />
     <Content Include="Assets\Icons\Instruments.png" />
     <Content Include="Assets\Icons\Kids.png" />
     <Content Include="Assets\Icons\MyPlaylist.png" />
+    <Content Include="Assets\Music\Instruments\flute.mp3" />
+    <Content Include="Assets\Music\Instruments\guitar.mp3" />
+    <Content Include="Assets\Music\Instruments\saxophone.mp3" />
     <Content Include="Assets\Music\kids\calender.mp3" />
     <Content Include="Assets\Music\kids\cleanup.mp3" />
     <Content Include="Assets\Music\Pop\Test.mp3" />
@@ -174,10 +180,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\CoverImages\Bollywood\" />
-    <Folder Include="Assets\CoverImages\Instrument\" />
     <Folder Include="Assets\CoverImages\Pop\" />
     <Folder Include="Assets\Music\Bollywood\" />
-    <Folder Include="Assets\Music\Instrument\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
