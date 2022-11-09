@@ -1,2 +1,2 @@
-MusicLibrary\bin
-MusicLibrary\obj
+MusicLibrary\bin\*
+MusicLibrary\obj\*
