@@ -4,10 +4,12 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Security.Cryptography.X509Certificates;
 using MusicLibrary.Model;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Media.Core;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -91,10 +93,12 @@ namespace MusicLibrary
                 if (sound.Category == MusicCategory.MyPlaylist)
                 {
                     AddPlaylist.Visibility = Visibility.Collapsed;
+                    RemovePlayList.Visibility = Visibility.Visible;
                 }
                 else
                 {
                     AddPlaylist.Visibility = Visibility.Visible;
+                    RemovePlayList.Visibility = Visibility.Collapsed;
                 }
 
             }
@@ -111,6 +115,22 @@ namespace MusicLibrary
 
             if (menuItem.Category == MusicCategory.MyPlaylist)
             {
+                //var playlistitems = new List<String>();
+                
+                playList.Clear();
+                var files = Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData
+                    ), "*.playlist.txt");
+                foreach (var file in files)
+                {
+
+                    var songnm = File.ReadAllText(file);
+                    
+                   // playlistitems.Add(songnm);
+                    var filteredSongs = songs.Where(song => song.Name == songnm).ToList();
+                    filteredSongs.ForEach(song => playList.Add(new Music(song.Name, MusicCategory.MyPlaylist, song.AudioFile, song.ImageFile)));
+
+                }
+
                 MusicGridView.ItemsSource = playList;
             }
             else
@@ -146,20 +166,25 @@ namespace MusicLibrary
 
         }
 
-        private void AddPlaylist_Click(object sender, RoutedEventArgs e)
+        private async void AddPlaylist_Click(object sender, RoutedEventArgs e)
         {
-            string songn = SimplepopTextBlock.Text;
-           // playList.Add(new Music(selectedSong));
+     
+            string song = SimplepopTextBlock.Text;
+            // playList.Add(new Music(selectedSong));
+            //  string user = UserName.Text;
 
-            
-            
-            
-            if (playList.Where(song => song.Name == songn).Count() == 0)
-            {
-                var filteredSongs = songs.Where(song => song.Name == songn).ToList();
-                filteredSongs.ForEach(song => playList.Add(new Music(song.Name, MusicCategory.MyPlaylist, song.AudioFile, song.ImageFile)));
-            }
+            var filename = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                $"{Path.GetRandomFileName()}.playlist.txt");
+            File.WriteAllText(filename, song);
 
+
+            /*  if (playList.Where(song => song.Name == songn).Count() == 0)
+              {
+                  var filteredSongs = songs.Where(song => song.Name == songn).ToList();
+                  filteredSongs.ForEach(song => playList.Add(new Music(song.Name, MusicCategory.MyPlaylist, song.AudioFile, song.ImageFile)));
+              } */
+            var dialog = new MessageDialog("Song added to PlayList successfully");
+            await dialog.ShowAsync();
 
 
         }
@@ -170,6 +195,47 @@ namespace MusicLibrary
             {
                 Text = "AddToPlayList"
             };
+
+
+        }
+
+        private async void RemovePlayList_Click(object sender, RoutedEventArgs e)
+        {
+            string playingsong = SimplepopTextBlock.Text;
+            var files = Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData
+                ), "*.playlist.txt");
+            foreach (var file in files)
+            {
+
+                var songnm = File.ReadAllText(file);
+                if (playingsong == songnm)
+                {
+                    File.Delete(file);
+                }
+
+            }
+
+            var dialog = new MessageDialog("Song removed from PlayList successfully");
+            await dialog.ShowAsync();
+            if (StandardPopup.IsOpen) { StandardPopup.IsOpen = false; }
+
+
+
+            playList.Clear();
+            var remainingfiles = Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData
+                ), "*.playlist.txt");
+            foreach (var file in remainingfiles)
+            {
+
+                var songnm = File.ReadAllText(file);
+
+                // playlistitems.Add(songnm);
+                var filteredSongs = songs.Where(song => song.Name == songnm).ToList();
+                filteredSongs.ForEach(song => playList.Add(new Music(song.Name, MusicCategory.MyPlaylist, song.AudioFile, song.ImageFile)));
+
+            }
+
+            MusicGridView.ItemsSource = playList;
 
 
         }

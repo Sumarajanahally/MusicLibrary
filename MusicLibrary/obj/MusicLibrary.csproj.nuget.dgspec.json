@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Github\\MusicLibrary\\MusicLibrary\\MusicLibrary.csproj": {}
+    "C:\\Pivot\\Projects\\MusicLibrary\\MusicLibrary\\MusicLibrary.csproj": {}
   },
   "projects": {
-    "D:\\Github\\MusicLibrary\\MusicLibrary\\MusicLibrary.csproj": {
+    "C:\\Pivot\\Projects\\MusicLibrary\\MusicLibrary\\MusicLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Github\\MusicLibrary\\MusicLibrary\\MusicLibrary.csproj",
+        "projectUniqueName": "C:\\Pivot\\Projects\\MusicLibrary\\MusicLibrary\\MusicLibrary.csproj",
         "projectName": "MusicLibrary",
-        "projectPath": "D:\\Github\\MusicLibrary\\MusicLibrary\\MusicLibrary.csproj",
-        "packagesPath": "C:\\Users\\sumam\\.nuget\\packages\\",
-        "outputPath": "D:\\Github\\MusicLibrary\\MusicLibrary\\obj\\",
+        "projectPath": "C:\\Pivot\\Projects\\MusicLibrary\\MusicLibrary\\MusicLibrary.csproj",
+        "packagesPath": "C:\\Users\\v-swchop\\.nuget\\packages\\",
+        "outputPath": "C:\\Pivot\\Projects\\MusicLibrary\\MusicLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -19,7 +19,7 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\sumam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\v-swchop\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

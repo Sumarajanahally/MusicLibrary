@@ -1,1 +1,1 @@
-D:\Github\MusicLibrary\MusicLibrary\MusicLibrary.csproj;x86
+C:\Pivot\Projects\MusicLibrary\MusicLibrary\MusicLibrary.csproj;x86

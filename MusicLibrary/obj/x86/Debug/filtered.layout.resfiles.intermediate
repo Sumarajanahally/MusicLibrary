@@ -1,4 +1,3 @@
-WinMetadata\Windows.winmd
 Assets\CoverImages\Instruments\flute.png
 Assets\CoverImages\Instruments\guitar.png
 Assets\CoverImages\Instruments\saxophone.png
@@ -25,3 +24,4 @@ LoginPage.xbf
 MainPage.xbf
 MusicLibrary.xr.xml
 Properties\Default.rd.xml
+WinMetadata\Windows.winmd
