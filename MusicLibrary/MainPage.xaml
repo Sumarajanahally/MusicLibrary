@@ -12,11 +12,11 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="60" />
-            <RowDefinition Height="*" />           
+            <RowDefinition Height="*" />
             <RowDefinition Height="50" />
         </Grid.RowDefinitions>
         <RelativePanel Grid.Row="0">
-            
+
             <Button Name ="HamburgerButton"
                     Click="HamburgerButton_Click"
                     FontFamily="Segoe MDL2 Assets"
@@ -33,8 +33,9 @@
                     Width="50"
                     />
             <TextBlock FontSize="20" Text="Media Player" RelativePanel.RightOf="BackButton" Margin="70,10,0,0"/>
-            <TextBlock Name="Welcome" Text="Welcome " RelativePanel.AlignRightWithPanel="True"  Margin="0,10,150,0"/>
-            <TextBlock Name="UserName" Text="Welcome" RelativePanel.AlignRightWithPanel="True" Margin="0,10,20,0"/>
+            <TextBlock Name="Welcome" Text="Welcome " RelativePanel.AlignRightWithPanel="True"  Margin="0,10,200,0"/>
+            <TextBlock Name="UserName" Text="Welcome" RelativePanel.AlignRightWithPanel="True" Margin="0,10,100,0"/>
+            <Button  x:Name="LogOut" Content="Logout" Click="LogOut_Click"  RelativePanel.AlignRightWithPanel="True" Margin="0,10,20,0" />
         </RelativePanel>
         <SplitView Grid.Row="1" Name="ContentSplitView"
                    DisplayMode="CompactOverlay"
@@ -52,10 +53,10 @@
                             </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
-                    
-                   
+
+
                 </ListView>
-                
+
             </SplitView.Pane>
             <SplitView.Content>
                 <Grid Margin="20,0,0,0">
@@ -64,7 +65,7 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
                     <TextBlock Grid.Row="0" Name="TextBlock" Text="All Songs" FontSize="24" />
-                    
+
                     <GridView Grid.Row="1"
                               Name="MusicGridView"
                               IsItemClickEnabled="True"
@@ -73,20 +74,20 @@
                         <GridView.ItemTemplate>
                             <DataTemplate x:DataType="data:Music" >
                                 <StackPanel Orientation="Vertical" RightTapped="StackPanel_RightTapped">
-                                <Image Height="112" Width="101" Source="{x:Bind ImageFile}" ></Image>
-                                <TextBlock Text="{x:Bind Name}" Margin="30,0,0,0"/>
+                                    <Image Height="112" Width="101" Source="{x:Bind ImageFile}" ></Image>
+                                    <TextBlock Text="{x:Bind Name}" Margin="30,0,0,0"/>
                                 </StackPanel>
                             </DataTemplate>
-                           
+
                         </GridView.ItemTemplate>
                     </GridView>
-                    
+
                     <Popup Grid.Row="2" Width="1000" Height="400" Name="StandardPopup">
                         <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
                 Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
                 BorderThickness="2">
                             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <MediaElement  Name="MusicMedia" Width="800" Height="300" AutoPlay="True"  AreTransportControlsEnabled="True" >
+                                <MediaElement  Name="MusicMedia" Width="800" Height="300" AutoPlay="False"  AreTransportControlsEnabled="True" >
                                     <MediaElement.TransportControls>
                                         <MediaTransportControls IsSeekBarVisible="True" IsCompactOverlayButtonVisible="True" IsFastForwardButtonVisible="True" IsFastForwardEnabled="True"
                                                      IsFastRewindButtonVisible="True" IsFastRewindEnabled="True"
@@ -95,20 +96,26 @@
                                 </MediaElement>
                                 <TextBlock x:Name="SimplepopTextBlock" Text="Simple Popup" FontSize="24.667" HorizontalAlignment="Center"/>
                                 <Button x:Name="ChangeCoverButton" Content="Change Cover" Click="ChangeCoverButton_Click" />
-                                <Button x:Name="AddPlaylist" Content="Add Playlist" Click="AddPlaylist_Click" />
+                                <Button x:Name="AddPlaylist" Content="Add Playlist" Click="AddPlaylist_Click">
+                                    <Button.Flyout>
+                                        <Flyout>
+                                            <TextBlock Text = "Added to Playlist" />
+                                        </Flyout>
+                                    </Button.Flyout>
+                                </Button>
                                 <Button Content="Close" Click="ClosePopupClicked" HorizontalAlignment="Center"/>
                             </StackPanel>
                         </Border>
                     </Popup>
 
-                 <!--   <MediaElement Grid.Row="2" Name="MusicMedia" Width="800" Height="300" AutoPlay="True" AreTransportControlsEnabled="True" >
+                    <!--   <MediaElement Grid.Row="2" Name="MusicMedia" Width="800" Height="300" AutoPlay="True" AreTransportControlsEnabled="True" >
                         <MediaElement.TransportControls>
                              <MediaTransportControls IsSeekBarVisible="True" IsCompactOverlayButtonVisible="True" IsFastForwardButtonVisible="True" IsFastForwardEnabled="True"
                                                      IsFastRewindButtonVisible="True" IsFastRewindEnabled="True"
                                                      IsNextTrackButtonVisible="True" IsPreviousTrackButtonVisible="True"/>
                         </MediaElement.TransportControls>
                     </MediaElement> -->
-                   <!-- <MediaPlayerElement Grid.Row="2" Name="MusicplayerMedia" AutoPlay="False" Width="400" AreTransportControlsEnabled="True" >
+                    <!-- <MediaPlayerElement Grid.Row="2" Name="MusicplayerMedia" AutoPlay="False" Width="400" AreTransportControlsEnabled="True" >
                     <MediaPlayerElement.TransportControls>
                             <MediaTransportControls  IsCompactOverlayButtonVisible="True" IsFastForwardButtonVisible="True" IsFastForwardEnabled="True"
                                                      IsFastRewindButtonVisible="True" IsFastRewindEnabled="True"
