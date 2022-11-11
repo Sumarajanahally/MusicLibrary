@@ -1,6 +1,10 @@
 MusicLibrary\bin\*
 MusicLibrary\obj\*
 MusicLibrary/bin
-MusicLibrary/obj
+MusicLibrary/bin/*
+!MusicLibrary/obj
+MusicLibrary/obj/*
+!MusicLibrary/obj/x64
 .vs\*
 .vs/*
+.vs/MusicLibrary

@@ -12,19 +12,18 @@
         <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <StackPanel Orientation="Vertical">
                 <TextBlock Text="Music App" FontSize="36" Margin="4" TextAlignment="Center"/>
-                <TextBlock x:Name="ErrorMessage" Text="" FontSize="20" Margin="4" Foreground="Red" TextAlignment="Center"/>
+                <TextBlock x:ConnectionId='2' x:Name="ErrorMessage" Text="" FontSize="20" Margin="4" Foreground="Red" TextAlignment="Center"/>
                 <TextBlock Text="Enter your username below" Margin="0,0,0,20"
                TextWrapping="Wrap" Width="300"
                TextAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
-                <TextBox x:Name="UsernameTextBox" Margin="4" Width="250"/>
-                <PasswordBox Name="Passwordbox" Margin="4" Width="250" PlaceholderText="Enter Password" PasswordChar="*" />
-				<Button x:Name="SignInButton" Content="Login" Background="DodgerBlue" Foreground="White"
-        Click="SignInButton_Click" Width="80" HorizontalAlignment="Center" Margin="0,20"/>
-
+                <TextBox x:ConnectionId='3' x:Name="UsernameTextBox" Margin="4" Width="250"/>
+                <PasswordBox x:ConnectionId='4' Name="Passwordbox" Margin="4" Width="250" PlaceholderText="Enter Password" PasswordChar="*" />
+                <Button x:ConnectionId='5' x:Name="SignInButton" Content="Login" Background="DodgerBlue" Foreground="White"
+                                               Width="80" HorizontalAlignment="Center" Margin="0,20"/>
                 <TextBlock Text="Don't have an account?"
                 TextAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
-                <TextBlock x:Name="RegisterButtonTextBlock" Text="Register now"
-               PointerPressed="RegisterButtonTextBlock_OnPointerPressed"
+                <TextBlock x:ConnectionId='6' x:Name="RegisterButtonTextBlock" Text="Register now"
+                                                                        
                Foreground="DodgerBlue"
                TextAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
              
@@ -33,3 +32,4 @@
 
     </Grid>
 </Page>
+

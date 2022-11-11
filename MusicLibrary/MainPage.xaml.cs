@@ -6,9 +6,12 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Security.Cryptography.X509Certificates;
 using MusicLibrary.Model;
+using Windows.Devices.Midi;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Media.Core;
+using Windows.Storage;
+using Windows.Storage.Pickers;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -30,10 +33,10 @@ namespace MusicLibrary
     {
         private ObservableCollection<Music> songs;
         private List<MenuItem> menuItems;
-      //  private Music selectedSong;
+        //  private Music selectedSong;
         private ObservableCollection<Music> playList;
-
-        public MainPage()
+        
+    public MainPage()
         {
             this.InitializeComponent();
 
@@ -44,16 +47,20 @@ namespace MusicLibrary
             else
             {
                 UserName.Text = LoginPage.UserName;
-            }
-            songs = new ObservableCollection<Music>();
-            playList = new ObservableCollection<Music>();
-            MusicManager.GetAllSongs(songs);
+                songs = new ObservableCollection<Music>();
+                playList = new ObservableCollection<Music>();
+                MusicManager.Init();
 
-            menuItems = new List<MenuItem>();
-            menuItems.Add(new MenuItem { IconFile = "Assets/Icons/Instruments.png", Category = MusicCategory.Instruments });
-            menuItems.Add(new MenuItem { IconFile = "Assets/Icons/Kids.png", Category = MusicCategory.Kids });
-            menuItems.Add(new MenuItem { IconFile = "Assets/Icons/Myplaylist.png", Category = MusicCategory.MyPlaylist });
-            BackButton.Visibility = Visibility.Collapsed;
+                MusicManager.UpdateOriginalList(UserName.Text);
+                    MusicManager.GetAllSongs(songs);
+
+                menuItems = new List<MenuItem>();
+                menuItems.Add(new MenuItem { IconFile = "Assets/Icons/Instruments.png", Category = MusicCategory.Instruments });
+                menuItems.Add(new MenuItem { IconFile = "Assets/Icons/Kids.png", Category = MusicCategory.Kids });
+                menuItems.Add(new MenuItem { IconFile = "Assets/Icons/Myplaylist.png", Category = MusicCategory.MyPlaylist });
+                BackButton.Visibility = Visibility.Collapsed;
+            }
+            
 
         }
 
@@ -115,22 +122,8 @@ namespace MusicLibrary
 
             if (menuItem.Category == MusicCategory.MyPlaylist)
             {
-                //var playlistitems = new List<String>();
-                
-                playList.Clear();
-                var files = Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData
-                    ), "*.playlist.txt");
-                foreach (var file in files)
-                {
 
-                    var songnm = File.ReadAllText(file);
-                    
-                   // playlistitems.Add(songnm);
-                    var filteredSongs = songs.Where(song => song.Name == songnm).ToList();
-                    filteredSongs.ForEach(song => playList.Add(new Music(song.Name, MusicCategory.MyPlaylist, song.AudioFile, song.ImageFile)));
-
-                }
-
+                LoadPlayList();
                 MusicGridView.ItemsSource = playList;
             }
             else
@@ -142,7 +135,25 @@ namespace MusicLibrary
 
         }
 
+        private void LoadPlayList()
+        {
+            playList.Clear();
+            var filename = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+              $"{UserName.Text}.playlist.txt");
+            MusicManager.GetAllSongs(songs);
+            if (File.Exists(filename))
+            {
+                string[] playListSongs = File.ReadAllLines(filename);
+                foreach(var playlistsong in playListSongs)
+                {
+                    var filteredSongs = songs.Where(song => song.Name == playlistsong).ToList();
+                    filteredSongs.ForEach(song => playList.Add(new Music(song.Name, MusicCategory.MyPlaylist, song.AudioFile, song.ImageFile)));
 
+                }
+
+            }
+
+        }
         // Handles the Click event on the Button inside the Popup control and 
         // closes the Popup. 
         private void ClosePopupClicked(object sender, RoutedEventArgs e)
@@ -160,31 +171,57 @@ namespace MusicLibrary
 
 
 
-        private void ChangeCoverButton_Click(object sender, RoutedEventArgs e)
+        private async void ChangeCoverButton_Click(object sender, RoutedEventArgs e)
         {
-            //string songName = SimplepopTextBlock.Text;
+            string songName = SimplepopTextBlock.Text;
+
+            var picker = new FileOpenPicker();
+            picker.ViewMode = PickerViewMode.Thumbnail;
+            picker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
+            picker.FileTypeFilter.Add(".jpg");
+            picker.FileTypeFilter.Add(".jpeg");
+            picker.FileTypeFilter.Add(".png");
+
+            StorageFile file = await picker.PickSingleFileAsync();
+            if (file != null)
+            {
+                MusicManager.UpdateCover(songName, file,UserName.Text);
+                MusicManager.GetAllSongs(songs);
+                MusicGridView.ItemsSource = songs;
+                MusicMedia.PosterSource = new BitmapImage(new Uri(this.BaseUri, file.Path));
+
+
+
+            }
 
         }
 
         private async void AddPlaylist_Click(object sender, RoutedEventArgs e)
         {
-     
-            string song = SimplepopTextBlock.Text;
+
+            var songnSelected = SimplepopTextBlock.Text;
             // playList.Add(new Music(selectedSong));
-            //  string user = UserName.Text;
-
+            string addText = Environment.NewLine + songnSelected.ToString() + Environment.NewLine;
             var filename = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-                $"{Path.GetRandomFileName()}.playlist.txt");
-            File.WriteAllText(filename, song);
-
+               $"{UserName.Text}.playlist.txt");
+            if (File.Exists(filename))
+            {
+                string[] playListSongs = File.ReadAllLines(filename);
+                if (!playListSongs.Contains(songnSelected))
+                { File.AppendAllText(filename, addText); }
+            }
+            else
+            {
+                File.WriteAllText(filename, songnSelected);
+            }
+            var dialog = new MessageDialog("Song added to PlayList successfully");
+            await dialog.ShowAsync();
 
             /*  if (playList.Where(song => song.Name == songn).Count() == 0)
               {
                   var filteredSongs = songs.Where(song => song.Name == songn).ToList();
                   filteredSongs.ForEach(song => playList.Add(new Music(song.Name, MusicCategory.MyPlaylist, song.AudioFile, song.ImageFile)));
-              } */
-            var dialog = new MessageDialog("Song added to PlayList successfully");
-            await dialog.ShowAsync();
+              }*/
 
 
         }
@@ -236,7 +273,12 @@ namespace MusicLibrary
             }
 
             MusicGridView.ItemsSource = playList;
+        }
 
+        private void LogOut_Click(object sender, RoutedEventArgs e)
+        {
+            LoginPage.IsLoggedIn = false;
+            Frame.Navigate(typeof(LoginPage));
 
         }
     }
