@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -32,27 +33,75 @@ namespace MusicLibrary
         }
 
         
-        private void SignInButton_Click(object sender, RoutedEventArgs e)
+        private async void SignInButton_Click(object sender, RoutedEventArgs e)
         {
             ErrorMessage.Text = "";
             UserName = UsernameTextBox.Text;
-            string ps = Passwordbox.Password.ToString();
+           string ps = Passwordbox.Password.ToString();
 
-            if(UserName != null &&  ps == "test")
+            //if(UserName != null &&  ps == "test")
+            //{
+            //    IsLoggedIn = true;
+            //    this.Frame.Navigate(typeof(MainPage));
+            //}
+            //else
+            //{
+            //    ErrorMessage.Text = "Invalid User Id/ Invaid Credentials";
+            //}
+
+            var filename = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+             UserName + "user.txt");
+            StreamReader sr = new StreamReader(filename);
+            var username_file = sr.ReadLine();
+            var password_file = sr.ReadLine();
+            sr.Close();
+
+            if (username_file == UserName && password_file == ps)
             {
+                var dialog = new MessageDialog("logged in");
+                await dialog.ShowAsync();
                 IsLoggedIn = true;
                 this.Frame.Navigate(typeof(MainPage));
+
             }
             else
             {
                 ErrorMessage.Text = "Invalid User Id/ Invaid Credentials";
+                var dialog = new MessageDialog(" login failed ");
+                await dialog.ShowAsync();
+
             }
+
 
 
         }
         private void RegisterButtonTextBlock_OnPointerPressed(object sender, PointerRoutedEventArgs e)
         {
-            ErrorMessage.Text = "";
+            //ErrorMessage.Text = "";
+            this.Frame.Navigate(typeof(Registration));
+
+            //UserName = UsernameTextBox.Text;
+            //string ps = Passwordbox.Password.ToString();
+
+            //var filename = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+            //UserName+ "user.txt");
+            //try
+            //{
+            //    StreamWriter sw = new System.IO.StreamWriter(filename);
+            //    sw.WriteLine(UserName + "\n" + ps);
+
+            //    sw.Close();
+            //}
+            //catch (System.IO.DirectoryNotFoundException ex)
+            //{
+            //    System.IO.Directory.CreateDirectory("C:\\" + UserName);
+            //    StreamWriter sw = new System.IO.StreamWriter(filename);
+            //    sw.WriteLine(UserName + "\n" + ps);
+
+            //    sw.Close();
+            //}
+            //var dialog = new MessageDialog(" successfully registered");
+            //await dialog.ShowAsync();
         }
     }
 }

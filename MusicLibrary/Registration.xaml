@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="MusicLibrary.Registration"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MusicLibrary"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="Music App" FontSize="36" Margin="4" TextAlignment="Center"/>
+            <TextBlock x:Name="ErrorMessage" Text="" FontSize="20" Margin="4" Foreground="Red" TextAlignment="Center"/>
+            <TextBlock Text="Enter your details below" Margin="0,0,0,20"
+               TextWrapping="Wrap" Width="300"
+               TextAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
+            <TextBox x:Name="UsernameTextBox" Margin="4" Width="250"/>
+            <PasswordBox Name="Passwordbox" Margin="4" Width="250" PlaceholderText="Enter Password" PasswordChar="*" />
+            <Button x:Name="Register" Content="Register" Background="DodgerBlue" Foreground="White"
+        Click="Register_Click" Width="80" HorizontalAlignment="Center" Margin="0,20"/>
+            <Button x:Name="Back" Content="Back" Background="DodgerBlue" Foreground="White"
+        Click="Back_Click" Width="80" HorizontalAlignment="Center" Margin="0,20"/>
+        </StackPanel>
+    </Grid>
+</Page>
