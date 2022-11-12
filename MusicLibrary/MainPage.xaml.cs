@@ -278,7 +278,7 @@ namespace MusicLibrary
         private void LogOut_Click(object sender, RoutedEventArgs e)
         {
             LoginPage.IsLoggedIn = false;
-            
+            MusicManager.InitDone = false;
             Frame.Navigate(typeof(LoginPage));
             
 

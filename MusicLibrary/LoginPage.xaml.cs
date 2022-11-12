@@ -43,25 +43,34 @@ namespace MusicLibrary
 
             var filename = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
              UserName + "user.txt");
-            StreamReader sr = new StreamReader(filename);
-            var username_file = sr.ReadLine();
-            var password_file = sr.ReadLine();
-            sr.Close();
-
-            if (username_file == UserName && password_file == ps)
+            if (File.Exists(filename))
             {
-                var dialog = new MessageDialog("logged in");
-                await dialog.ShowAsync();
-                IsLoggedIn = true;
-                this.Frame.Navigate(typeof(MainPage));
+                StreamReader sr = new StreamReader(filename);
+                var username_file = sr.ReadLine();
+                var password_file = sr.ReadLine();
+                sr.Close();
 
+                if (username_file == UserName && password_file == ps)
+                {
+                    var dialog = new MessageDialog("logged in");
+                    await dialog.ShowAsync();
+                    IsLoggedIn = true;
+                    this.Frame.Navigate(typeof(MainPage));
+
+                }
+                else
+                {
+                    ErrorMessage.Text = "Invalid User Id/ Invalid Credentials";
+                    var dialog = new MessageDialog(" login failed ");
+                    await dialog.ShowAsync();
+
+                }
             }
             else
             {
-                ErrorMessage.Text = "Invalid User Id/ Invaid Credentials";
-                var dialog = new MessageDialog(" login failed ");
-                await dialog.ShowAsync();
-
+                ErrorMessage.Text = "User does not exist";
+               // var dialog = new MessageDialog(" login failed ");
+              //  await dialog.ShowAsync();
             }
 
 

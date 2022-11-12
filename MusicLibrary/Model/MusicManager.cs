@@ -22,6 +22,7 @@ namespace MusicLibrary.Model
             {
                 // MusicCategory category;
                 // string path = $"/Assets/Music";
+                OriginalSongs.Clear();
                 string root = Windows.ApplicationModel.Package.Current.InstalledLocation.Path;
                 string pathmusic = root + "/Assets/Music";
                 string pathimage = root + "/Assets/CoverImages";
