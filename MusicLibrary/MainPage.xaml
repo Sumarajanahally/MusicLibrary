@@ -98,7 +98,7 @@
                                 <Button x:Name="ChangeCoverButton" Content="Change Cover" Click="ChangeCoverButton_Click" />
 
                                 <Button x:Name="AddPlaylist" Content="Add to Playlist" Click="AddPlaylist_Click" />
-                                <Button x:Name="RemovePlayList" Content="Remove from PlayList" Click="RemovePlayList_Click" />
+                                <!--<Button x:Name="RemovePlayList" Content="Remove from PlayList" Click="RemovePlayList_Click" />-->
 
                                 <Button Content="Close" Click="ClosePopupClicked" HorizontalAlignment="Center"/>
                             </StackPanel>

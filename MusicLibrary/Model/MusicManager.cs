@@ -14,7 +14,7 @@ namespace MusicLibrary.Model
     internal static class MusicManager
     {
         static private List<Music> OriginalSongs = new List<Music>();
-        static bool InitDone = false;
+        public static bool InitDone = false;
 
         public static void Init()
         {

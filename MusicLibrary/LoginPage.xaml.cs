@@ -39,15 +39,7 @@ namespace MusicLibrary
             UserName = UsernameTextBox.Text;
            string ps = Passwordbox.Password.ToString();
 
-            //if(UserName != null &&  ps == "test")
-            //{
-            //    IsLoggedIn = true;
-            //    this.Frame.Navigate(typeof(MainPage));
-            //}
-            //else
-            //{
-            //    ErrorMessage.Text = "Invalid User Id/ Invaid Credentials";
-            //}
+           
 
             var filename = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
              UserName + "user.txt");
@@ -77,31 +69,10 @@ namespace MusicLibrary
         }
         private void RegisterButtonTextBlock_OnPointerPressed(object sender, PointerRoutedEventArgs e)
         {
-            //ErrorMessage.Text = "";
+            
             this.Frame.Navigate(typeof(Registration));
 
-            //UserName = UsernameTextBox.Text;
-            //string ps = Passwordbox.Password.ToString();
-
-            //var filename = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-            //UserName+ "user.txt");
-            //try
-            //{
-            //    StreamWriter sw = new System.IO.StreamWriter(filename);
-            //    sw.WriteLine(UserName + "\n" + ps);
-
-            //    sw.Close();
-            //}
-            //catch (System.IO.DirectoryNotFoundException ex)
-            //{
-            //    System.IO.Directory.CreateDirectory("C:\\" + UserName);
-            //    StreamWriter sw = new System.IO.StreamWriter(filename);
-            //    sw.WriteLine(UserName + "\n" + ps);
-
-            //    sw.Close();
-            //}
-            //var dialog = new MessageDialog(" successfully registered");
-            //await dialog.ShowAsync();
+           
         }
     }
 }

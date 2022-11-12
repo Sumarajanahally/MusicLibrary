@@ -100,12 +100,12 @@ namespace MusicLibrary
                 if (sound.Category == MusicCategory.MyPlaylist)
                 {
                     AddPlaylist.Visibility = Visibility.Collapsed;
-                    RemovePlayList.Visibility = Visibility.Visible;
+                    //RemovePlayList.Visibility = Visibility.Visible;
                 }
                 else
                 {
                     AddPlaylist.Visibility = Visibility.Visible;
-                    RemovePlayList.Visibility = Visibility.Collapsed;
+                  //  RemovePlayList.Visibility = Visibility.Collapsed;
                 }
 
             }
@@ -235,8 +235,7 @@ namespace MusicLibrary
 
 
         }
-
-        private async void RemovePlayList_Click(object sender, RoutedEventArgs e)
+      /*  private async void RemovePlayList_Click(object sender, RoutedEventArgs e)
         {
             string playingsong = SimplepopTextBlock.Text;
             var files = Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData
@@ -273,12 +272,15 @@ namespace MusicLibrary
             }
 
             MusicGridView.ItemsSource = playList;
-        }
+        }*/
+
 
         private void LogOut_Click(object sender, RoutedEventArgs e)
         {
             LoginPage.IsLoggedIn = false;
+            
             Frame.Navigate(typeof(LoginPage));
+            
 
         }
     }
